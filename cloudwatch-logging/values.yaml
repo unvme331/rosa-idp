@@ -1,5 +1,5 @@
 rosa:
-   region: __REGION__
-   clusterName: __CLUSTER_NAME__
+   region: us-east-2
+   clusterName: rosagandolf
 
 

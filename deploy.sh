@@ -6,8 +6,8 @@ if [ -z "$ORIGIN_URL" ]; then
   exit;
 fi
 echo "Current repo url is: $ORIGIN_URL"
-if [[ "$ORIGIN_URL" == *"open-sudo"* ]]; then
-  echo "You CANNOT apply these changes to open-sudo"
+if [[ "$ORIGIN_URL" == *"unvme331"* ]]; then
+  echo "You CANNOT apply these changes to unvme331"
   exit;
 fi
 
@@ -75,15 +75,15 @@ echo "AWS Account ID found: $AWS_ACCOUNT_ID"
 
 export current=`git config --get remote.origin.url`
 echo "Current repo url is: $current"
-if [[ "$current" == *"open-sudo"* ]]; then
-  echo "You CANNOT apply these changes to open-sudo"
+if [[ "$current" == *"unvme331"* ]]; then
+  echo "You CANNOT apply these changes to unvme331"
 fi
 
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|open-sudo|${GITHUB_NAME}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|__AWS_ACCOUNT_ID__|${AWS_ACCOUNT_ID}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|__OIDC_ENDPOINT__|${OIDC_ENDPOINT}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|__REGION__|${REGION}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|__CLUSTER_NAME__|${CLUSTER_NAME}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|unvme331|${GITHUB_NAME}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|376135008091|${AWS_ACCOUNT_ID}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|rh-oidc.s3.us-east-1.amazonaws.com/21b0q02rdtql800lrpbhm20jkr12glt5|${OIDC_ENDPOINT}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|us-east-2|${REGION}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|rosagandolf|${CLUSTER_NAME}|g" {} +
 
 
 aws cloudformation create-stack --template-body file://cloudformation/rosa-cloudwatch-logging-role.yaml \

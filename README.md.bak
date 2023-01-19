@@ -1,6 +1,6 @@
 # rosa-idp
 
-1) Fork the following repo https://github.com/open-sudo/rosa-idp.git to your github repo.
+1) Fork the following repo https://github.com/unvme331/rosa-idp.git to your github repo.
 1) On your line of command, clone the repo you just forked
 2) Log in into OpenShift on the CLI
 
@@ -33,11 +33,11 @@ aws cloudformation create-stack --template-body file://rosa_idp/cloudformation/r
 
 ```shell
 cd rosa_idp
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|open-sudo|${github_repo}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|__AWS_ACCOUNT_ID__|${AWS_ACCOUNT_ID}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|__OIDC_ENDPOINT__|${OIDC_ENDPOINT}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|__REGION__|${REGION}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|__CLUSTER_NAME__|${CLUSTER_NAME}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|unvme331|${github_repo}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|376135008091|${AWS_ACCOUNT_ID}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|rh-oidc.s3.us-east-1.amazonaws.com/21b0q02rdtql800lrpbhm20jkr12glt5|${OIDC_ENDPOINT}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|us-east-2|${REGION}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|rosagandolf|${CLUSTER_NAME}|g" {} +
 git add -A
 git commit -m "initial customization"
 git push
