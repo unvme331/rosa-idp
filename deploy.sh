@@ -6,7 +6,7 @@ if [ -z "$ORIGIN_URL" ]; then
   exit;
 fi
 echo "Current repo url is: $ORIGIN_URL"
-if [[ "$ORIGIN_URL" == *"unvme331"* ]]; then
+if [[ "$ORIGIN_URL" == *"open-sudo"* ]]; then
   echo "You CANNOT apply these changes to unvme331"
   exit;
 fi
@@ -75,7 +75,7 @@ echo "AWS Account ID found: $AWS_ACCOUNT_ID"
 
 export current=`git config --get remote.origin.url`
 echo "Current repo url is: $current"
-if [[ "$current" == *"unvme331"* ]]; then
+if [[ "$current" == *"open-sudo"* ]]; then
   echo "You CANNOT apply these changes to unvme331"
 fi
 
