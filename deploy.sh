@@ -80,10 +80,10 @@ if [[ "$current" == *"open-sudo"* ]]; then
 fi
 
 find . -type f -not -path '*/\.git/*' -exec sed -i "s|unvme331|${GITHUB_NAME}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|376135008091|${AWS_ACCOUNT_ID}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|rh-oidc.s3.us-east-1.amazonaws.com/21b0q02rdtql800lrpbhm20jkr12glt5|${OIDC_ENDPOINT}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|393387318561|${AWS_ACCOUNT_ID}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|rh-oidc.s3.us-east-1.amazonaws.com/21blpv0rs8gquqa2p05rc9b9pbi2qif8|${OIDC_ENDPOINT}|g" {} +
 find . -type f -not -path '*/\.git/*' -exec sed -i "s|us-east-2|${REGION}|g" {} +
-find . -type f -not -path '*/\.git/*' -exec sed -i "s|rosagandolf|${CLUSTER_NAME}|g" {} +
+find . -type f -not -path '*/\.git/*' -exec sed -i "s|gandolfrosa|${CLUSTER_NAME}|g" {} +
 
 
 aws cloudformation create-stack --template-body file://cloudformation/rosa-cloudwatch-logging-role.yaml \

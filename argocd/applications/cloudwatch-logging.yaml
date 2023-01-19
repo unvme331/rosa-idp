@@ -15,8 +15,8 @@ spec:
       values: |
         installCRDs: true
         rosa.region: us-east-2
-        rosa.name: rosagandolf
-        aws.cloudwatch.roleArn: "arn:aws:iam::376135008091:role/rosagandolf-RosaClusterWatchLogging"
+        rosa.name: gandolfrosa
+        aws.cloudwatch.roleArn: "arn:aws:iam::393387318561:role/gandolfrosa-RosaClusterWatchLogging"
 
   destination:
     server: https://kubernetes.default.svc
