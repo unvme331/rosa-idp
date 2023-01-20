@@ -38,8 +38,8 @@ data:
       "logs": {
         "metrics_collected": {
           "prometheus": {
-            "cluster_name": "gandolfrosa",
-            "log_group_name": "/aws/containerinsights/gandolfrosa/prometheus",
+            "cluster_name": "rosagandolfproj",
+            "log_group_name": "/aws/containerinsights/rosagandolfproj/prometheus",
             "prometheus_config_path": "/etc/prometheusconfig/prometheus.yaml",
             "emf_processor": {
               "metric_declaration": [

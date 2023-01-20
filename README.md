@@ -138,7 +138,7 @@ Once you get a route, invoke it using curl. Be sure to use http instead of https
 Download the <a href="https://raw.githubusercontent.com/rh-mobb/documentation/main/content/docs/rosa/metrics-to-cloudwatch-agent/dashboard.json">dashboard json file</a>. Customize it with following commands:
 
 ```shell
-sed -i 's/gandolfrosa/$YOUR_CLUSTER_NAME/g' dashboard.json 
+sed -i 's/rosagandolfproj/$YOUR_CLUSTER_NAME/g' dashboard.json 
 sed -i 's/__CLUSTER_REGION__/$YOUR_CLUSTER_REGION/g' dashboard.json 
 ```
 

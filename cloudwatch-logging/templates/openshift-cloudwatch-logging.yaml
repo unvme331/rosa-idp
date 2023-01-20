@@ -7,7 +7,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "0"
 
 stringData:
-  role_arn: "arn:aws:iam::393387318561:role/gandolfrosa-RosaClusterWatchLogging"
+  role_arn: "arn:aws:iam::367740295123:role/rosagandolfproj-RosaClusterWatchLogging"
 ---
 apiVersion: "logging.openshift.io/v1"
 kind: ClusterLogForwarder
